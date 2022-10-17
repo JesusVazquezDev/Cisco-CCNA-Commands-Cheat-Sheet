@@ -34,13 +34,9 @@
 `shutdown` |  Shuts down the interface
  `speed` <10 / 100 / 1000 / auto> | Sets the speed of an interface or configure it as auto
  `show vlan/ show vlan brief` | Lists each VLAN and all interfaces assigned to that VLAN but does not include trunks
- `show cdp` | Shows whether CDP is enabled globally
- `show cdp neighbors` | 	Displays all CDP neighbors
  `show interfaces` | Displays detailed information about interface status
  `show interface status` | Displays the interface line status
- `show lldp` | Displays global information for LLDP
  `show mac address-table` | Displays the MAC address table
- `spanning-tree mode rapid-pvst` | Configures the device for Rapid Per VLAN Spanning Tree protocol
  `show interfaces switchport` | 	Displays configuration settings about all the switch port interfaces
  `show interfaces trunk` |  Displays information about the operational trunks along with their VLANs
  `switchport mode access` | 	In the interface configuration mode, the command assigns the interface link type as an access link
@@ -56,15 +52,6 @@
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
-
 
 # STP Commands 
 | Command  | Purpose | 
@@ -97,6 +84,11 @@
  `clock read calender` | Synchronize the software to the calender's time
  `clock summer-time reccuring <name> <start> <end> [offest]` | Automatically configure summer time
  `ntp server <IP>` | Configure ntp server
+ `ntp master [number]` | Manually configure an device to act like an ntp sever
+ `ntp peer <IP address>` | Symmetric active mode 
+ `ntp authenticate` | Enable NTP authentication
+ `ntp authentication-key <key number> md5 <key>` | Create the authentication key(s)
+ `ntp trusted-key <key-number>` | Specified which key(s) is trusted
  `show clock` | View the time 
  `show clock detail` | View the time source of the device 
  `show calendar` | View the calendar 
