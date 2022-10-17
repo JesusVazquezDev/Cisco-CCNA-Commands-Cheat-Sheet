@@ -1,6 +1,6 @@
 # Cisco-Commands-Cheat-Sheet
 
-
+# Basic Commands
 
 | Command  | Purpose | 
 |:----------:|:-------------:|
@@ -51,6 +51,9 @@
  
  
  
+ # OSPF Commands
+ | Command  | Purpose | 
+|:----------:|:-------------:|
  
 
 # STP Commands 
