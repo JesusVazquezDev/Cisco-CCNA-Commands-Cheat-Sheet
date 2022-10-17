@@ -51,3 +51,54 @@
  `terminal monitor` | Enables debug and system’s error messages for the current terminal
  `vlan` *vlan-id* | Enter to configuration vlan mode
  `write erase` / `erase startup-config` | Deletes the startup config
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+# STP Commands 
+| Command  | Purpose | 
+|:----------:|:-------------:|
+ `spanning-tree mode rapid-pvst` | Configures the device for Rapid Per VLAN Spanning Tree protocol
+ `show interfaces trunk` |  Displays information about the operational trunks along with their VLANs
+
+# CDP Commands 
+| Command  | Purpose | 
+|:----------:|:-------------:|
+ `cdp run` |
+ `cdp enable` |
+ `show cdp` | Shows whether CDP is enabled globally
+ `show cdp neighbors` |  Displays all CDP neighbors
+
+# LLDP Commands 
+| Command  | Purpose | 
+ |:----------:|:-------------:|
+ `show lldp` | Displays global information for LLDP
+ `lldp run` | 
+
+ 
+# NTP Commands 
+| Command  | Purpose | 
+|:----------:|:-------------:|
+ `clock set hh:mm:ss {day/month} {month/day} year` | Manually configure the software clock 
+ `calendar set hh:mm:ss {day/month} {month/day} year` | Manually configure the hardware clock 
+ `clock timezone  <name of time zone> [minuits-offest]` | Configure the timezone 
+ `clock update calendar` | Synchronize the hardware to the software's time 
+ `clock read calender` | Synchronize the software to the calender's time
+ `clock summer-time reccuring <name> <start> <end> [offest]` | Automatically configure summer time
+ `ntp server <IP>` | Configure ntp server
+ `show clock` | View the time 
+ `show clock detail` | View the time source of the device 
+ `show calendar` | View the calendar 
+ `show ntp status` | View the ntp status
+ `show ntp associations` | View all the servers you configured 
