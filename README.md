@@ -41,10 +41,8 @@ Router(config-router)# | router config mode
  `show running-config` | Display the current configuration
  `show startup-config` | Display the configuration at startup
  `show interfaces` | Displays detailed information about interface status
- `show ip protocols` | 
+ `show ip protocols` | Displays all the configured routing protocols 
  `show ip interface` |  Displays the status for each interface
- `show ip interface brief` | 
- `show ip route` |
  `show interface status` | Displays the interface line status
  `show mac address-table` | Displays the MAC address table
 
@@ -77,8 +75,8 @@ Router(config-router)# | router config mode
 |:----------:|:-------------:|
  `router eigrp <Autonomous system number> ` | Enter EIGRP config mode 
  `eigrp router id` | Set up an 
- `no auto-summary ` | 
- `show ip eigrp neighbors` | 
+ `no auto-summary ` | Modify the default EIGRP behavior of automatic summarization
+ `show ip eigrp neighbors` |  Disable EIGRP neighbors 
  
  
  # OSPF Configuration Commands 
