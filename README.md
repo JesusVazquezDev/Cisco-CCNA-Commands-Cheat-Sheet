@@ -1,36 +1,39 @@
 # Cisco-Commands-Cheat-Sheet
+Here you can find the CISCO cli commands you have to learn for the CCNA.
+
+
+
+# CISCO Modes
+| Mode | Description | 
+|:----------:|:-------------:|
+Router> | User mode
+Router# | Privilege mode
+Router(config)# | Global Config mode 
+Router(config-if) | Interface mode
+Router(config-vlan)# | Vlan config mode
+Router(config-router)# | router config mode
+
+
 
 # Basic Commands
 
 | Command  | Purpose | 
 |:----------:|:-------------:|
-`config t` or `configure terminal` | Enter configuration mode
+ `enable`| Enter privilege mode 
+ `configure terminal` | Enter configuration mode
+ `description` *<name-string>* | Set a description to the interface
+`hostname` *name* | Sets a host name to the current Cisco network device
+`interface` *fastethernet/number* | Enters interface configuration mode for the specified fast ethernet interface
 `copy` *from-location to-location* | copie a file (or set of files) from one location to another
 `copy running-config startup-config` | It saves the configuration when the device reloads, it loads the latest configuration file
 `copy startup-config running-config` | Saves the startup configuration into the running configuration
- `description` *<name-string>* | Set a description to the interface
- `duplex` *<auto / full / half>* |	Sets the interface duplex
- `enable`| Enter privilege mode | 
- `enable secret` *<password>* | Enables secret passwords hashed with the MD5 algorithm
-`exit` / `end` | Return to previous mode 
-`hostname` *name* | Sets a host name to the current Cisco network device
-`interface` *fastethernet/number* | Enters interface configuration mode for the specified fast ethernet interface
-`ip domain-lookup` | Enables domain lookup service
-`ip default-gateway` *<ip address>* | Sets the default gateway for the router
- `line` | Enter line configuration mode
-`logout`/ `disable` | 	Exit User mode
- `no shutdown` | turns up the interface
- `ping` *<target IP / hostname>* | Diagnoses basic network connectivity
- `reload` | 	Reboot the device
-`show ip route` | Display the current state of the routing table
-`shutdown` |  Shuts down the interface
- `speed` <10 / 100 / 1000 / auto> | Sets the speed of an interface or configure it as auto
- `show interface status` | Displays the interface line status
- `show mac address-table` | Displays the MAC address table
- `show interfaces switchport` | 	Displays configuration settings about all the switch port interfaces
- `switchport mode access` | 	In the interface configuration mode, the command assigns the interface link type as an access link
- `show vtp status` |  Displays all vtp status
+ `write` | Save the current configuration
  `write erase` / `erase startup-config` | Deletes the startup config
+`reload` | 	Reboot the device
+ `exit` / `end` | Return to previous mode 
+ `logout`/ `disable` | 	Exit User mode
+ `shutdown` |  Shuts down the interface
+ `no shutdown` | turns up the interface
  
  # Basic show Commads
  | Command  | Purpose | 
@@ -42,6 +45,8 @@
  `show ip interface` |  Displays the status for each interface
  `show ip interface brief` | 
  `show ip route` |
+ `show interface status` | Displays the interface line status
+ `show mac address-table` | Displays the MAC address table
 
 
 
@@ -51,7 +56,9 @@
 |:----------:|:-------------:|
 `vlan` *vlan-id* | Enter to configuration vlan mode
 `show vlan/ show vlan brief` | Lists each VLAN and all interfaces assigned to that VLAN but does not include trunks
-
+`switchport mode trunk` |  Set the interface  link type as a trunk link 
+`show interfaces trunk` |  Displays information about the operational trunks along with their VLANs
+`switchport trunk encapsulation dot1q` | 	Sets the 802.1Q encapsulation on the trunk port
 
  
  
@@ -69,15 +76,17 @@
   | Command  | Purpose | 
 |:----------:|:-------------:|
  `router eigrp <Autonomous system number> ` | Enter EIGRP config mode 
- `eigrp router id` |
+ `eigrp router id` | Set up an 
+ `no auto-summary ` | 
+ `show ip eigrp neighbors` | 
  
  
  # OSPF Configuration Commands 
  | Command  | Purpose | 
 |:----------:|:-------------:|
- `router ospf ` [*number*] | Enter OSPF config mode
- `passive-interface` [interface] | Stop sending 'Hello' messages of the specified interface
- `router-id` <number> | Set an OSPF router ID in ip format 
+ `router ospf ` *number* | Enter OSPF config mode
+ `passive-interface` *interface* | Stop sending 'Hello' messages of the specified interface
+ `router-id` *number* | Set an OSPF router ID in ip format 
  `clear ip ospf` | Rest OSPF
  `auto-cost bandwidth` *megabits per second* | Change the refrence bandwidth
  `ip ospf cost`  *cost*| Manually configure the OSPF cost 
@@ -85,36 +94,51 @@
  `ip priority [Priority]` | Change the OSPF interface priority 
  `ip ospf process` | Rest the OSPF process
  `ip ospf network` *type* | Manually configure the network type 
+ `ip ospf database` |  Displays the contents of the OSPF routing database
  `bandwidth` *<bandwidth in kilobits>* | Change the interface bandwidth 
  `show ip interface ospf` *brief* | Disable each OSPF-enabled interface
- `show ip ospf interface`  *interface* | 
+ `show ip ospf interface`  *interface* |  Display the specified OSPF interface
  `show ip ospf neighbor` | Disable OSPF neighbors 
- `switchport mode trunk` |  Set the interface  link type as a trunk link 
- `show interfaces trunk` |  Displays information about the operational trunks along with their VLANs
+ 
 
-
+# HSRP Configuration Commands 
+ | Command  | Purpose | 
+|:----------:|:-------------:|
+ `standby` *group number* | Configure HSRP
+ `standby version 2` | HSRP version 2 
+ `standby <group number> ip` *IP address* | Configure the virtual IP address
+ `standby <group number> priority` *value* | Manually configure the active router
+ `standby <group number> preempt` | Enable preemption
+ `show standby` | Displays global information for HSRP
  
  
 
 # STP Configuration Commands 
 | Command  | Purpose | 
 |:----------:|:-------------:|
- `spanning-tree mode rapid-pvst` | Configures the device for Rapid Per VLAN Spanning Tree protocol
- `show interfaces trunk` |  Displays information about the operational trunks along with their VLANs
+ `spanning-tree portfast` | Enable portfast
+ `spanning-tree portfast bpdguard default` | Enable BPDU Gurad on all portfast interfaces
+ `spanning-tree bpdguard enable` | Enbale BPDU Gurad 
+ `spanning-tree mode` *mode* | Configure  STP mode
+ `spanning-tree vlan <vlan number> root primary` | Configure the root bridge
+ `spanning-tree vlan <vlan number> root secondary` | Configure the secondary root bridge
+ `show spanning-tree` | Displays global information for STP
 
 # CDP Configuration Commands 
 | Command  | Purpose | 
 |:----------:|:-------------:|
- `cdp run` |
- `cdp enable` |
- `show cdp` | Shows whether CDP is enabled globally
+ `cdp run` | Enable cdp 
+ `cdp enable` | Enable cdp
+ `show cdp` | Displays global information for CDPDisplays global information for LLDP
  `show cdp neighbors` |  Displays all CDP neighbors
 
 # LLDP Configuration Commands 
 | Command  | Purpose | 
  |:----------:|:-------------:|
+ `lldp run` | Enable LLDP 
  `show lldp` | Displays global information for LLDP
- `lldp run` | 
+ `show lldp neighbors` | Display the list of LLDP neighbors
+ `show lldp neighbors detail` | Display more details from the list of LLDP neighbors
 
  
 # Clock & NTP Configuration Commands 
@@ -138,21 +162,3 @@
  `show calendar` | View the calendar 
  `show ntp status` | View the ntp status
  `show ntp associations` | View all the servers you configured 
- 
- 
- 
- # DNS Configuration Commands 
- | Command  | Purpose | 
-|:----------:|:-------------:|
-  `ip dns server` | Enables DNS service
-  `dns-server` *<IP address>* | Sets the DNS server IP address for the DHCP clients
-
-
- # SYSLOG Configuration Commands 
- | Command  | Purpose | 
-|:----------:|:-------------:|
-`show logging` |  Displays the state of system logging (syslog) and the contents of the standard system logging buffer
- `logging` <*ip address*> | Determines the Syslog server to send log messages
-
-
- 
