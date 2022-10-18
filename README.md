@@ -74,7 +74,7 @@ Router(config-router)# | router config mode
   | Command  | Purpose | 
 |:----------:|:-------------:|
  `router eigrp <Autonomous system number> ` | Enter EIGRP config mode 
- `eigrp router id` | Set up an 
+ `eigrp router id` | Configure EIGRP router ID
  `no auto-summary ` | Modify the default EIGRP behavior of automatic summarization
  `show ip eigrp neighbors` |  Disable EIGRP neighbors 
  
@@ -154,7 +154,7 @@ Router(config-router)# | router config mode
  `ntp authenticate` | Enable NTP authentication
  `ntp authentication-key <key number> md5 <key>` | Create the authentication key(s)
  `ntp trusted-key <key-number>` | Specified which key(s) is trusted
- `ip nat` *<inside / outside>* | It designate whether the interface is the inside or outside of NAT
+ `ip nat` *inside / outside* | It designate whether the interface is the inside or outside of NAT
  `show clock` | View the time 
  `show clock detail` | View the time source of the device 
  `show calendar` | View the calendar 
