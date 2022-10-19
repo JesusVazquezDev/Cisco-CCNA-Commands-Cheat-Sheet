@@ -189,7 +189,7 @@ Router(config-router)# | router config mode
  ### IOS Commands
   | Command  | Purpose | 
 |:----------:|:-------------:|
-`ip dhcp excluded-address <low range ip-address> <top range ip-address>` | Specifies IP addresses that a DHCP server should not assign to DHCP clients
+`ip dhcp excluded-address <low-address> <high-address>` | Specifies IP addresses that a DHCP server should not assign to DHCP clients
 `ip dhcp pool` *name* | Creates a DHCP pool / Entres DHCP config mode
 `network <network-number> <mask>` | Configures the network number and mask for a DHCP address pool 
 `default-router <address>` | Specifies the default router list for a DHCP client
