@@ -168,7 +168,7 @@ Router(config-router)# | router config mode
 |:----------:|:-------------:|
 `ipconfig /displaydns` | View the DNS cache
 `ipconfig /flushdns` | Clears the DNS cache 
-### Cisco CLI Commands
+### IOS Commands
 | Command  | Purpose | 
 |:----------:|:-------------:|
 `ip dns server` | Configures a router as a DNS server 
@@ -177,3 +177,24 @@ Router(config-router)# | router config mode
 `ip domain-name` *name* | Conﬁgures a DNS domain name 
 `ip domain lookup` | Enables DNS lookup
 `show hosts` | Disables the configured and learned hosts 
+ 
+
+ # DHCP Configuration Commands
+ ### Windows Commads
+ | Command  | Purpose | 
+|:----------:|:-------------:|
+ `ipconfig /release` | Releases the DHCP learned IP address
+ `ipconfig /renew` | Gets an IP address from a DHCP server
+ 
+ ### IOS Commands
+  | Command  | Purpose | 
+|:----------:|:-------------:|
+`ip dhcp excluded-address <low range ip-address> <top range ip-address>` | Specifies IP addresses that a DHCP server should not assign to DHCP clients
+`ip dhcp pool` *name* | Creates a DHCP pool / Entres DHCP config mode
+`network <network-number> <mask>` | Configures the network number and mask for a DHCP address pool 
+`default-router <address>` | Specifies the default router list for a DHCP client
+ `lease` *days* *hours* *minuts*| Configures the lease time 
+ `lease infinit` | 
+ `show dhcp biding` | Displays all of the DHCP clients
+ `ip helper-address` *address* | Configure a DHCP relay-agent
+ `ip address dhcp` | Configures a DHCP client 
