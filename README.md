@@ -198,3 +198,15 @@ Router(config-router)# | router config mode
  `show dhcp biding` | Displays all of the DHCP clients
  `ip helper-address` *address* | Configure a DHCP relay-agent
  `ip address dhcp` | Configures a DHCP client 
+
+
+# SNMP Commands 
+ | Command  | Purpose | 
+|:----------:|:-------------:|
+`snmp-server contact` *contact* | Configures contact infomation 
+`snmp-server location` *location* | Configures the location of the SNMP server
+`snmp-server community <string> ro`| Configures the community strings (read only)
+`snmp-server community <string> rw` |  Configures the community strings (read/write)
+`snmp-server host <host> version 2c <string>` | Configures the NMC address
+`snmp-server enable traps snmp linkdown linkup` | 
+`snmp-server enable traps config` | 
