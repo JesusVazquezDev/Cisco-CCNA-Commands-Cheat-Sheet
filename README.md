@@ -210,3 +210,25 @@ Router(config-router)# | router config mode
 `snmp-server host <host> version 2c <string>` | Configures the NMC address
 `snmp-server enable traps snmp linkdown linkup` | 
 `snmp-server enable traps config` | 
+
+ # SYSLOG Commnads
+  | Command  | Purpose | 
+|:----------:|:-------------:|
+ `logging console` *level* | Configures logging to the console line 
+ `logging monitor` *level key-word* | Configures logging to the VTY lines
+ `logging buffered ` *size* *level*  | Configures logging to the buffer
+ `logging <server-ip>`/ `logging host <server-ip>` | Configures logging to an external server
+ `logging trap <level>` | Limits messages that are logged to the syslog servers based on severity
+ `logging synchronus` | Prevents every logging output from immediately interrupting the console session
+ `terminal monitor` | Sends a copy of all syslog messages to Telnet or SSH 
+ `service timestamps log` *datetime* / *uptime* | Enables timestamps
+ `service squence-numbers` | Enable squence numbers
+ 
+ # Console Port Security Commands
+  | Command  | Purpose | 
+|:----------:|:-------------:|
+ `line console 0` | Enters console configuration mode
+ `passowrd <passowrd>`  | Sets up a passowrd
+ `login` | Requires a user to enter the passowrd to access the CLI 
+ `login local` | login with the username
+ `exec-timeout <minuits> <seconds>` | Log out after a certain period of incativity 
