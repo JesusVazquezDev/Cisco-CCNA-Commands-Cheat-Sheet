@@ -154,7 +154,6 @@ Router(config-router)# | router config mode
  `ntp authenticate` | Enable NTP authentication
  `ntp authentication-key <key number> md5 <key>` | Create the authentication key(s)
  `ntp trusted-key <key-number>` | Specified which key(s) is trusted
- `ip nat` *inside / outside* | It designate whether the interface is the inside or outside of NAT
  `show clock` | View the time 
  `show clock detail` | View the time source of the device 
  `show calendar` | View the calendar 
