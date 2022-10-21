@@ -27,7 +27,7 @@ Router(config-router)# | router config mode
 `copy` *from-location to-location* | copie a file (or set of files) from one location to another
 `copy running-config startup-config` | It saves the configuration when the device reloads, it loads the latest configuration file
 `copy startup-config running-config` | Saves the startup configuration into the running configuration
- `write` | Save the current configuration
+ `write` / `write memory` | Save the current configuration
  `write erase` / `erase startup-config` | Deletes the startup config
 `reload` | 	Reboots the device
  `exit` / `end` | Returns to previous mode 
@@ -231,3 +231,27 @@ Router(config-router)# | router config mode
  `login` | Requires a user to enter the passowrd to access the CLI 
  `login local` | login with the username
  `exec-timeout <minuits> <seconds>` | Log out after a certain period of incativity 
+
+ 
+ # SHH Commands 
+   | Command  | Purpose | 
+|:----------:|:-------------:|
+ `crypto key generate rsa` | Creates the keys that are required by SSH
+ `ip ssh version 2` | Restricts SSH version 2 only 
+ `ip domain name <name>` | Configures a domain name 
+ `tranport input ssh` | Limits connection to SSH only 
+ `show ip ssh` | Shows if SSH is enabled or not 
+ `line vty 0 15` | Access all VTY lines
+ 
+ 
+ # FTP & TFTP Commands 
+  | Command  | Purpose | 
+|:----------:|:-------------:|
+ `ip ftp username <username>` | Configures a username 
+ `ip ftp password <pasword>` | Configures a passowrd
+ `copy ftp: flash:` |  Copies files from a FTP server the device flash
+ `copy tftp: flash:` | Copies files from a TFTP server the device flash
+ `boot system flash <file name>` | Configures the new IOS
+ `delete flash:<file name>` | Deletes a file
+ `show file systems` | View the file systems on a CISCO IOS 
+ `show flash` | View the contents of flash
