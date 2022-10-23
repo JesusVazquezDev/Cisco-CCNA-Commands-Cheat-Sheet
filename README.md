@@ -255,3 +255,13 @@ Router(config-router)# | router config mode
  `delete flash:<file name>` | Deletes a file
  `show file systems` | View the file systems on a CISCO IOS 
  `show flash` | View the contents of flash
+ 
+ 
+ # NAT Commands 
+ | Command  | Purpose | 
+|:----------:|:-------------:|
+ `ip nat` *inside* / *outside* | Designatea an inside or outside interface
+ `ip nat inside source <inside local ip> <inside global ip>` |  Configures the one-to-one ip mappings
+ `show ip nat translations` | 
+ `show ip nat statistics`
+  `clear ip nat translations *` | Clears the NAT translation table 
