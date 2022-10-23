@@ -262,6 +262,9 @@ Router(config-router)# | router config mode
 |:----------:|:-------------:|
  `ip nat` *inside* / *outside* | Designatea an inside or outside interface
  `ip nat inside source <inside local ip> <inside global ip>` |  Configures the one-to-one ip mappings
+ `ip nat inside source list <acess-list> pool <pool-name>` | Configures dynamic NAT by mapping to the ACL pool
+  `ip nat inside source list <acess-listacess-list> pool <pool-name> overload` | Configures PAT
+  `ip nat inside source list <acess-list> interface <interface> overload` | Configures PAT
  `show ip nat translations` | 
  `show ip nat statistics`
-  `clear ip nat translations *` | Clears the NAT translation table 
+ `clear ip nat translation *` | Clears the NAT translation table 
