@@ -278,8 +278,8 @@ Router(config-router)# | router config mode
  `switchport port-security mac-address <mac address>` |  Adds a MAC address to the list of secure MAC addresses
  `switchport port-security aging time <minutes / inactivity>` | Configures the aging time 
  `switchport port-security violation <shutdown / restrict / protect>` |  Sets the action to be taken when a security violation is detected
+ `switchport port-security maximum maximum` | Sets the maximum number of secure MAC addresses on the port
  `switchport port-security mac-address sticky` | Enables sticky secure mac address 
  `switchport port-security mac-address sticky <mac address>` | Configures a sticky mac address
  `errdisable recovery cause psecure-violation` | Re-enables an interface
  `show port-security interface <interface>` | Displays information about security options configured on the interface
- 
