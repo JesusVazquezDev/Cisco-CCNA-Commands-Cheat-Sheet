@@ -57,6 +57,7 @@ Router(config-router)# | router config mode
 `switchport mode trunk/access` |  Set the interface  link type as a trunk or access
 `show interfaces trunk` |  Displays information about the operational trunks along with their VLANs
 `switchport trunk encapsulation dot1q` | 	Sets the 802.1Q encapsulation on the trunk port
+`switchport voice vlan <vlan id>` | Configures a voice VLan 
 
  
  
@@ -263,8 +264,22 @@ Router(config-router)# | router config mode
  `ip nat` *inside* / *outside* | Designatea an inside or outside interface
  `ip nat inside source <inside local ip> <inside global ip>` |  Configures the one-to-one ip mappings
  `ip nat inside source list <acess-list> pool <pool-name>` | Configures dynamic NAT by mapping to the ACL pool
-  `ip nat inside source list <acess-listacess-list> pool <pool-name> overload` | Configures PAT
-  `ip nat inside source list <acess-list> interface <interface> overload` | Configures PAT
+  ip nat inside source list <acess-listacess-list> pool <pool-name> overload` | Configures PAT
+ `ip nat inside source list <acess-list> interface <interface> overload` | Configures PAT
  `show ip nat translations` | 
  `show ip nat statistics`
  `clear ip nat translation *` | Clears the NAT translation table 
+
+ 
+# Port security Commands
+  | Command  | Purpose | 
+|:----------:|:-------------:|
+ `switchport port-security` | Enables port security
+ `switchport port-security mac-address <mac address>` |  Adds a MAC address to the list of secure MAC addresses
+ `switchport port-security aging time <minutes / inactivity>` | Configures the aging time 
+ `switchport port-security violation <shutdown / restrict / protect>` |  Sets the action to be taken when a security violation is detected
+ `switchport port-security mac-address sticky` | Enables sticky secure mac address 
+ `switchport port-security mac-address sticky <mac address>` | Configures a sticky mac address
+ `errdisable recovery cause psecure-violation` | Re-enables an interface
+ `show port-security interface <interface>` | Displays information about security options configured on the interface
+ 
