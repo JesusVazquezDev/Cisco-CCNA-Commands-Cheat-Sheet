@@ -283,3 +283,26 @@ Router(config-router)# | router config mode
  `switchport port-security mac-address sticky <mac address>` | Configures a sticky mac address
  `errdisable recovery cause psecure-violation` | Re-enables an interface
  `show port-security interface <interface>` | Displays information about security options configured on the interface
+
+ 
+ # DHCP Snooping Commands 
+   | Command  | Purpose | 
+|:----------:|:-------------:|
+ `ip dhcp snooping` | Enables DHCP snooping globally
+ `ip dhcp snooping vlan <vlan-num>` | Enables DHCP snooping on the specified VLan 
+ `ip dhcp snooping trust` | Configures an interface as a trusted port 
+ `ip dhcp snooping rate limit rate <packets per second>` | Configures DHCP rate limitation
+ `errdisable recovery cause dhcp-rate-limit` | Enables  errdisable recovery for DHCP rate limiting
+ `no ip dhcp snooping information option` | Disables DHCP option 82 
+ `show ip dhcp snooping biding` | 
+ 
+ 
+# DAI Configuration
+   | Command  | Purpose | 
+|:----------:|:-------------:|
+ `ip arp  inspection vlan <vlan-num>` | Enables DAI
+ `ip arp inspection trust` | Configures an interface as a trusted port 
+ `ip arp inspection validate <dst-mac / src-mac / ip>` |
+ `ip arp inspection limit rate ` | Configures DAI rate limiting
+ `errdiable recovery cause arp-inspection` | Manually re-enable disabled interfaces
+ `show ip arp inspection` | Displays the summury of the DAI configuration
