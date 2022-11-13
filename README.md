@@ -62,7 +62,7 @@ Router(config-router)# | router config mode
  
  
  # RIP Configuration Commands 
-  | Command  | Purpose | `
+  | Command  | Purpose | 
 |:----------:|:-------------:|
  `router rip` | Enters RIP configuration mode
  `version 2` | RIP version 2 
