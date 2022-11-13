@@ -62,12 +62,13 @@ Router(config-router)# | router config mode
  
  
  # RIP Configuration Commands 
-  | Command  | Purpose | 
+  | Command  | Purpose | `
 |:----------:|:-------------:|
  `router rip` | Enters RIP configuration mode
  `version 2` | RIP version 2 
  `no auto-summary` | Modifys the default RIPv2 behavior of automatic summarization
  `show ip rip database` | Displays the contents of the RIP routing database
+ `debug ip rip` | Enables RIP debugging
 
  
  
