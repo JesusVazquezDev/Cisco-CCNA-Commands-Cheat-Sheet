@@ -117,6 +117,7 @@ Router(config-router)# | router config mode
 | Command  | Purpose | 
 |:----------:|:-------------:|
  `spanning-tree portfast` | Enables portfast
+ `spanning-tree portfast default` | Enables portfast on all access ports
  `spanning-tree portfast bpdguard default` | Enables BPDU Gurad on all portfast interfaces
  `spanning-tree bpdguard enable` | Enbales BPDU Gurad 
  `spanning-tree mode` *mode* | Configures  STP mode
