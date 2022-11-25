@@ -45,6 +45,7 @@ Router(config-router)# | router config mode
  `show ip interface` |  Displays the status for each interface
  `show interface status` | Displays the interface line status
  `show mac address-table` | Displays the MAC address table
+ `show interfaces trunk` | Displays trunk ports
 
 
 
@@ -111,6 +112,16 @@ Router(config-router)# | router config mode
  `standby <group number> preempt` | Enables preemption
  `show standby` | Displays global information for HSRP
  
+ # IPv6 Configuration Commands 
+  | Command  | Purpose | 
+|:----------:|:-------------:|
+ `ipv6 unicat-routing` | Enables IPv6 routing 
+ `ipv6 address <address/prefix>` *eui-64* | Configures an IPv6 address
+ `ipv6 address autoconfig ` | 
+ `ipv6 enable` | Enables IPv6 
+ `show ipv6 nterface` *brief* |  
+ `show ipv6 neighbor` | Displays IPv6 neighbor table 
+ 
  
 
 # STP Configuration Commands 
@@ -124,6 +135,19 @@ Router(config-router)# | router config mode
  `spanning-tree vlan <vlan number> root primary` | Configures the root bridge
  `spanning-tree vlan <vlan number> root secondary` | Configures the secondary root bridge
  `show spanning-tree` | Displays global information for STP
+ 
+ 
+ # Etherchannel Configuration Commands
+ | Command  | Purpose | 
+|:----------:|:-------------:|
+ `interface port-channel <channel-group>` | Enters interface config mode for the specified port channel 
+ `channel-group <interface id> mode < active / desirable / on / passive / auto >` | Configures an interface to be part of an Etherchannel 
+ `channel protocol <lacp / pagp >` | Manually configures the Etherchannel negotiation protocol 
+ `port channel load-balance < src-mac / dst-mac / src-dst-mac /  dst-ip / src-ip / src-dst-ip >` | Configures the Etherchannl load-balancing method 
+ `show etherchannel summary` | Displayes the summary of the etherchannels  
+ `show etherchannle port-channel` | Displays information about virtual port-channel interfaces
+ `show etherchannel load-balance` | Displays information about the load-balancing settings
+ 
 
 # CDP Configuration Commands 
 | Command  | Purpose | 
@@ -202,7 +226,7 @@ Router(config-router)# | router config mode
  `ip address dhcp` | Configures a DHCP client 
 
 
-# SNMP Commands 
+# SNMP Configuration Commands 
  | Command  | Purpose | 
 |:----------:|:-------------:|
 `snmp-server contact` *contact* | Configures contact infomation 
@@ -213,7 +237,7 @@ Router(config-router)# | router config mode
 `snmp-server enable traps snmp linkdown linkup` | 
 `snmp-server enable traps config` | 
 
- # SYSLOG Commnads
+ # SYSLOG Configuration Commnads
   | Command  | Purpose | 
 |:----------:|:-------------:|
  `logging console` *level* | Configures logging to the console line 
@@ -236,7 +260,7 @@ Router(config-router)# | router config mode
  `exec-timeout <minuits> <seconds>` | Log out after a certain period of incativity 
 
  
- # SHH Commands 
+ # SHH Configuration Commands 
    | Command  | Purpose | 
 |:----------:|:-------------:|
  `crypto key generate rsa` | Creates the keys that are required by SSH
@@ -247,7 +271,7 @@ Router(config-router)# | router config mode
  `line vty 0 15` | Access all VTY lines
  
  
- # FTP & TFTP Commands 
+ # FTP & TFTP Configuration Commands 
   | Command  | Purpose | 
 |:----------:|:-------------:|
  `ip ftp username <username>` | Configures a username 
@@ -260,7 +284,7 @@ Router(config-router)# | router config mode
  `show flash` | View the contents of flash
  
  
- # NAT Commands 
+ # NAT Configuration Commands 
  | Command  | Purpose | 
 |:----------:|:-------------:|
  `ip nat` *inside* / *outside* | Designatea an inside or outside interface
@@ -272,6 +296,11 @@ Router(config-router)# | router config mode
  `show ip nat statistics`
  `clear ip nat translation *` | Clears the NAT translation table 
 
+ # Voice vlan Commands 
+ | Command  | Purpose | 
+|:----------:|:-------------:|
+ `switchport voice vlan <vlan-id>` | Configures a voice VLAN
+ 
  
 # Port security Commands
   | Command  | Purpose | 
@@ -299,7 +328,7 @@ Router(config-router)# | router config mode
  `show ip dhcp snooping biding` | 
  
  
-# DAI Configuration
+# DAI Configuration Commands 
    | Command  | Purpose | 
 |:----------:|:-------------:|
  `ip arp  inspection vlan <vlan-num>` | Enables DAI
