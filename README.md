@@ -121,6 +121,7 @@ Router(config-router)# | router config mode
  `ipv6 enable` | Enables IPv6 
  `show ipv6 nterface` *brief* |  
  `show ipv6 neighbor` | Displays IPv6 neighbor table 
+ `show ipv6 route` | Displays the IPv6 routing table 
  
  
 
