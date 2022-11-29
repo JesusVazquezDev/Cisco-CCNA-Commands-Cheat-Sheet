@@ -68,6 +68,7 @@ Router(config-router)# | router config mode
  `router rip` | Enters RIP configuration mode
  `version 2` | RIP version 2 
  `no auto-summary` | Modifys the default RIPv2 behavior of automatic summarization
+ `default-information originate` | Generates a default route
  `show ip rip database` | Displays the contents of the RIP routing database
  `debug ip rip` | Enables RIP debugging
 
