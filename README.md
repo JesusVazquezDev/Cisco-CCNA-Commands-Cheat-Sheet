@@ -46,7 +46,7 @@ Router(config-router)# | router config mode
  `show interface status` | Displays the interface line status
  `show mac address-table` | Displays the MAC address table
  `show interfaces trunk` | Displays trunk ports
-
+`show interfaces <interface> switchport` | Disables the switchport configuration
 
 
  
@@ -60,6 +60,18 @@ Router(config-router)# | router config mode
 `switchport trunk encapsulation dot1q` | 	Sets the 802.1Q encapsulation on the trunk port
 `switchport voice vlan <vlan id>` | Configures a voice VLan 
 
+ DTP & VTP Configuration Commands
+   | Command  | Purpose | 
+|:----------:|:-------------:|
+`switchport mode dynamic` | Configures DTP
+`switchport mode dynamic` *auto* / *desirable* | Configures dynamic mode
+`switchport nonegotiate` | Disables DTP negogotiation on an interface
+ `vtp mode < client / server / tranparent>` | Configure VTP mode 
+ `vtp version` | Changes the VTP version
+ `vtp domain <domain name>` | Changes the VTP domain name 
+`show vtp status` | Disables VTP configuration 
+ 
+ 
  
  
  # RIP Configuration Commands 
