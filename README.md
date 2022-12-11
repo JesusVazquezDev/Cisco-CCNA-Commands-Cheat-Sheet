@@ -60,7 +60,7 @@ Router(config-router)# | router config mode
 `switchport trunk encapsulation dot1q` | 	Sets the 802.1Q encapsulation on the trunk port
 `switchport voice vlan <vlan id>` | Configures a voice VLan 
 
- DTP & VTP Configuration Commands
+# DTP & VTP Configuration Commands
    | Command  | Purpose | 
 |:----------:|:-------------:|
 `switchport mode dynamic` | Configures DTP
