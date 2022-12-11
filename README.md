@@ -24,7 +24,8 @@ Router(config-router)# | router config mode
  `description` *<name-string>* | Sets a description to the interface
 `hostname` *name* | Sets a host name to the current Cisco network device
 `interface` *fastethernet/number* | Enters interface configuration mode for the specified fast ethernet interface
-`copy` *from-location to-location* | copie a file (or set of files) from one location to another
+`default interface <interface>` | Rests the specified interface to its default configuration 
+ `copy` *from-location to-location* | copie a file (or set of files) from one location to another
 `copy running-config startup-config` | It saves the configuration when the device reloads, it loads the latest configuration file
 `copy startup-config running-config` | Saves the startup configuration into the running configuration
  `write` / `write memory` | Save the current configuration
@@ -48,7 +49,11 @@ Router(config-router)# | router config mode
  `show interfaces trunk` | Displays trunk ports
 `show interfaces <interface> switchport` | Disables the switchport configuration
 
-
+# Multilayer Switch Configuration Commands 
+  | Command  | Purpose | 
+|:----------:|:-------------:|
+ `ip routing` | Enables layer 3 routing on a switch 
+ `no switch port` | Configures the interface as a routed port  
  
 # Vlan Configuration Commands 
   | Command  | Purpose | 
