@@ -173,14 +173,24 @@ Router(config-router)# | router config mode
 |:----------:|:-------------:|
  `cdp run` | Enables cdp 
  `cdp enable` | Enables cdp
- `show cdp` | Displays global information for CDPDisplays global information for LLDP
+ `cdp timer` | Configres the CDP timer 
+ `cdp holdtime` *seconds* | Configures cdp holdtimer
+ `cdp advertise-v2` | Configres CPDv2
+ `show cdp` | Displays global information for CDP
+ `show cdp traffic` |  Displayes the cdp trafic 
  `show cdp neighbors` |  Displays all CDP neighbors
 
 # LLDP Configuration Commands 
 | Command  | Purpose | 
  |:----------:|:-------------:|
  `lldp run` | Enables LLDP 
+ `lldp transmit` | Enables LLDP transmition on a specfic interface
+ `lldp receive` | Enables LLDP to revceive 
+ `lldp timer` *seconds* | Configures the LLDP timer 
+ `lldp holdtime` *seconds* | Configures LLDP holdtimer
+ `lldp reinit` *seconds* | Configures the LLDP reinit timer
  `show lldp` | Displays global information for LLDP
+  `show lldp traffic` | Displayes the LLDP trafic 
  `show lldp neighbors` | Displays the list of LLDP neighbors
  `show lldp neighbors detail` | Displays more details from the list of LLDP neighbors
 
