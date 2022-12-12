@@ -278,6 +278,7 @@ Router(config-router)# | router config mode
  `terminal monitor` | Sends a copy of all syslog messages to Telnet or SSH 
  `service timestamps log` *datetime* / *uptime* | Enables timestamps
  `service squence-numbers` | Enable squence numbers
+ `show logging` | Displays the device's logs 
  
  # Console Port Security Commands
   | Command  | Purpose | 
