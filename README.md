@@ -142,7 +142,18 @@ Router(config-router)# | router config mode
  `show ipv6 route` | Displays the IPv6 routing table 
  
  
-
+# ACLs Configuration Commands 
+   | Command  | Purpose | 
+|:----------:|:-------------:|
+ `access-list <number> {deny / permit} ip wildcard mask` | Configures a basic standard ACL 
+ `ip access-list standard <acl-name>` | Enters standard ACL config mode 
+ `[entry number] {deny / permit} ip wildcard mask`  | Configures a named ACL
+ `access-list <number> remark <remark>` | Adds a remark to an ACL
+ `ip access-group <number> {in / out}` | Applys the ACL to an interface
+ `show access-list` | Displays all the configured ACLs
+ `show ip access-list` | Displays only IP ACLs
+ 
+ 
 # STP Configuration Commands 
 | Command  | Purpose | 
 |:----------:|:-------------:|
@@ -341,12 +352,17 @@ Router(config-router)# | router config mode
  `switchport port-security` | Enables port security
  `switchport port-security mac-address <mac address>` |  Adds a MAC address to the list of secure MAC addresses
  `switchport port-security aging time <minutes / inactivity>` | Configures the aging time 
+ `switchport port-security aging type <absolute / inactivity>` | Configures the the aging type 
+ `switchport port-security aging static` | 
  `switchport port-security violation <shutdown / restrict / protect>` |  Sets the action to be taken when a security violation is detected
  `switchport port-security maximum maximum` | Sets the maximum number of secure MAC addresses on the port
  `switchport port-security mac-address sticky` | Enables sticky secure mac address 
  `switchport port-security mac-address sticky <mac address>` | Configures a sticky mac address
  `errdisable recovery cause psecure-violation` | Re-enables an interface
+ `show port-security` | Displays the port security interfaces 
+ `errdisable recovery interval <seconds>` | Configures the timer interval
  `show port-security interface <interface>` | Displays information about security options configured on the interface
+ `show errdisable recovery` | Displays reasons an interface  is errdisabled 
 
  
  # DHCP Snooping Commands 
