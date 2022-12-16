@@ -62,6 +62,7 @@ Router(config-router)# | router config mode
 `show vlan/ show vlan brief` | Lists each VLAN and all interfaces assigned to that VLAN but does not include trunks
 `switchport mode trunk/access` |  Set the interface  link type as a trunk or access
 `show interfaces trunk` |  Displays information about the operational trunks along with their VLANs
+`encapsulation dot1q <vlan-number>` | Configures the VLAN number on a router subinterface
 `switchport trunk encapsulation dot1q` | 	Sets the 802.1Q encapsulation on the trunk port
 `switchport voice vlan <vlan id>` | Configures a voice VLan 
 
