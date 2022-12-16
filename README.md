@@ -60,6 +60,7 @@ Router(config-router)# | router config mode
 |:----------:|:-------------:|
 `vlan` *vlan-id* | Enter to configuration vlan mode
 `show vlan/ show vlan brief` | Lists each VLAN and all interfaces assigned to that VLAN but does not include trunks
+ `switchport trunk native vlan <vlan-number>` | Configures the native VLAN on a trunk port
 `switchport mode trunk/access` |  Set the interface  link type as a trunk or access
 `show interfaces trunk` |  Displays information about the operational trunks along with their VLANs
 `encapsulation dot1q <vlan-number>` | Configures the VLAN number on a router subinterface
