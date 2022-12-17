@@ -167,6 +167,8 @@ Router(config-router)# | router config mode
  `spanning-tree mode` *mode* | Configures  STP mode
  `spanning-tree vlan <vlan number> root primary` | Configures the root bridge
  `spanning-tree vlan <vlan number> root secondary` | Configures the secondary root bridge
+ `spanning-tree vlan <vlan-id> cost <cost>` | Configures the STP cost of an interface
+ `spanning-tree vlan <vlan-id> port-priority` *priority* | Configures the STP priority of an interface
  `show spanning-tree` | Displays global information for STP
  
  
