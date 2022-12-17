@@ -171,6 +171,13 @@ Router(config-router)# | router config mode
  `spanning-tree vlan <vlan-id> port-priority` *priority* | Configures the STP priority of an interface
  `show spanning-tree` | Displays global information for STP
  
+ # RSTP  Configuration Commands
+  | Command  | Purpose | 
+|:----------:|:-------------:|
+ `spanning-tree mode rapid-pvst`| Enables rapid PVST mode 
+ `spanning-tree portfast` | Configures a switchport as an RSTP edge port
+ `spanning-tree link-type <point-to-point / shared>`  | Configures the RSTP switchport link type  
+ 
  
  # Etherchannel Configuration Commands
  | Command  | Purpose | 
