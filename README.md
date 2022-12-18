@@ -87,6 +87,7 @@ Router(config-router)# | router config mode
 |:----------:|:-------------:|
  `router rip` | Enters RIP configuration mode
  `version 2` | RIP version 2 
+ `maximum-paths <number>` | Modifies the number of paths RIP will perform ECMP load-balancing over
  `no auto-summary` | Modifys the default RIPv2 behavior of automatic summarization
  `default-information originate` | Generates a default route
  `show ip rip database` | Displays the contents of the RIP routing database
@@ -98,6 +99,7 @@ Router(config-router)# | router config mode
   | Command  | Purpose | 
 |:----------:|:-------------:|
  `router eigrp <Autonomous system number> ` | Enters EIGRP config mode 
+ `network ip-address [ wildcard-mask ]` | Enables EIGRP on interfaces in the specified range
  `eigrp router id` | Configures EIGRP router ID
  `no auto-summary ` | Modifys the default EIGRP behavior of automatic summarization
  `show ip eigrp neighbors` |  Disables EIGRP neighbors 
@@ -118,6 +120,8 @@ Router(config-router)# | router config mode
  `ip ospf network` *type* | Manually configure the network type 
  `ip ospf database` |  Displays the contents of the OSPF routing database
  `bandwidth` *<bandwidth in kilobits>* | Changes the interface bandwidth 
+ `ip ospf authentication` | Enables authentication 
+ `ip ospf authentication-key <password>` | Configures an OSPF password on an interface
  `show ip interface ospf` *brief* | Disables each OSPF-enabled interface
  `show ip ospf interface`  *interface* |  Displays the specified OSPF interface
  `show ip ospf neighbor` | Disables OSPF neighbors 
