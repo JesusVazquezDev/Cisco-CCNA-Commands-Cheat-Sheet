@@ -157,6 +157,7 @@ Router(config-router)# | router config mode
  `[entry number] {deny / permit} ip wildcard mask`  | Configures a named ACL
  `access-list <number> remark <remark>` | Adds a remark to an ACL
  `ip access-group <number> {in / out}` | Applys the ACL to an interface
+ `<permit | deny> ip any any` | Creates an extended ACL entry to permit or deny all traffic
  `show access-list` | Displays all the configured ACLs
  `show ip access-list` | Displays only IP ACLs
  
@@ -206,6 +207,7 @@ Router(config-router)# | router config mode
  `show cdp` | Displays global information for CDP
  `show cdp traffic` |  Displayes the cdp trafic 
  `show cdp neighbors` |  Displays all CDP neighbors
+ `show cdp entry <hostname>` | Shows detailed information for a specific CDP neighbor
 
 # LLDP Configuration Commands 
 | Command  | Purpose | 
