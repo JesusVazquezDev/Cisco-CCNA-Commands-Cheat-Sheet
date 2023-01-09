@@ -15,7 +15,7 @@ Router(config-router)# | router config mode
 
 
 
-# Basic Commands
+# Basic Commands ( Router> )
 
 | Command  | Purpose | 
 |:----------:|:-------------:|
@@ -36,7 +36,7 @@ Router(config-router)# | router config mode
  `shutdown` |  Shuts down the interface
  `no shutdown` | turns up the interface
  
- # Basic show Commads
+ # Basic show Commands
  | Command  | Purpose | 
  |:----------:|:-------------:|
  `show running-config` | Displays the current configuration
